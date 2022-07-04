@@ -38,19 +38,19 @@ cellNine.addEventListener('click', selectNine);
 //     symbol: 'X',
     
 // }
+var playerOneScore = 0;
+var playerTwoScore = 0;
 // --------------------------------------------------
 // Game Functions
 function selectOne() {
     if (gameBoard[0] === 'X') {
     cellOne.style.fontSize = "50px";
     cellOne.textContent = 'X';
-    cellOne.style.pointerEvents = 'none';
     cellOne.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellOne.style.fontSize = "50px";
     cellOne.textContent = 'O';
-    cellOne.style.pointerEvents = 'none';
     cellOne.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -60,13 +60,13 @@ function selectTwo() {
     if (gameBoard[0] === 'X') {
     cellTwo.style.fontSize = "50px";
     cellTwo.textContent = 'X';
-    cellTwo.style.pointerEvents = 'none';
     cellTwo.setAttribute('id', 'selected');
+    // cellTwo.style.pointerEvents = 'none';
     }
     else if (gameBoard[0] === 'O') {
     cellTwo.style.fontSize = "50px";
     cellTwo.textContent = 'O';
-    cellTwo.style.pointerEvents = 'none';
+    // cellTwo.style.pointerEvents = 'none';
     cellTwo.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -76,14 +76,14 @@ function selectThree() {
     if (gameBoard[0] === 'X') {
     cellThree.style.fontSize = "50px";
     cellThree.textContent = 'X';
-    cellThree.style.pointerEvents = 'none';
+    // cellThree.style.pointerEvents = 'none';
     cellThree.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellThree.style.fontSize = "50px";
     cellThree.textContent = 'O';
-    cellThree.style.pointerEvents = 'none';
+    // cellThree.style.pointerEvents = 'none';
     cellThree.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -93,14 +93,14 @@ function selectFour() {
     if (gameBoard[0] === 'X') {
     cellFour.style.fontSize = "50px";
     cellFour.textContent = 'X';
-    cellFour.style.pointerEvents = 'none';
+    // cellFour.style.pointerEvents = 'none';
     cellFour.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellFour.style.fontSize = "50px";
     cellFour.textContent = 'O';
-    cellFour.style.pointerEvents = 'none';
+    // cellFour.style.pointerEvents = 'none';
     cellFour.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -110,14 +110,14 @@ function selectFive() {
     if (gameBoard[0] === 'X') {
     cellFive.style.fontSize = "50px";
     cellFive.textContent = 'X';
-    cellFive.style.pointerEvents = 'none';
+    // cellFive.style.pointerEvents = 'none';
     cellFive.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellFive.style.fontSize = "50px";
     cellFive.textContent = 'O';
-    cellFive.style.pointerEvents = 'none';
+    // cellFive.style.pointerEvents = 'none';
     cellFive.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -127,14 +127,14 @@ function selectSix() {
     if (gameBoard[0] === 'X') {
     cellSix.style.fontSize = "50px";
     cellSix.textContent = 'X';
-    cellSix.style.pointerEvents = 'none';
+    // cellSix.style.pointerEvents = 'none';
     cellSix.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellSix.style.fontSize = "50px";
     cellSix.textContent = 'O';
-    cellSix.style.pointerEvents = 'none';
+    // cellSix.style.pointerEvents = 'none';
     cellSix.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -144,13 +144,13 @@ function selectSeven() {
     if (gameBoard[0] === 'X') {
     cellSeven.style.fontSize = "50px";
     cellSeven.textContent = 'X';
-    cellSeven.style.pointerEvents = 'none';
+    // cellSeven.style.pointerEvents = 'none';
     cellSeven.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellSeven.style.fontSize = "50px";
     cellSeven.textContent = 'O';
-    cellSeven.style.pointerEvents = 'none';
+    // cellSeven.style.pointerEvents = 'none';
     cellSeven.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -160,13 +160,13 @@ function selectEight() {
     if (gameBoard[0] === 'X') {
     cellEight.style.fontSize = "50px";
     cellEight.textContent = 'X';
-    cellEight.style.pointerEvents = 'none';
+    // cellEight.style.pointerEvents = 'none';
     cellEight.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellEight.style.fontSize = "50px";
     cellEight.textContent = 'O';
-    cellEight.style.pointerEvents = 'none';
+    // cellEight.style.pointerEvents = 'none';
     cellEight.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -176,118 +176,203 @@ function selectNine() {
     if (gameBoard[0] === 'X') {
     cellNine.style.fontSize = "50px";
     cellNine.textContent = 'X';
-    cellNine.style.pointerEvents = 'none';
+    // cellNine.style.pointerEvents = 'none';
     cellNine.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellNine.style.fontSize = "50px";
     cellNine.textContent = 'O';
-    cellNine.style.pointerEvents = 'none';
+    // cellNine.style.pointerEvents = 'none';
     cellNine.setAttribute('id', 'selected');
     }
     gameBoard.shift()
     winner()
 }
 // --------------------------------------------------
+const playerOne = document.querySelector('.playerOneScore');
+const playerTwo = document.querySelector('.playerTwoScore');
 
 function winner() {
    if(cellOne.textContent === 'X' && cellTwo.textContent === 'X' && cellThree.textContent === 'X') {
-       alert('Player One Wins!');
-       cellOne.style.backgroundColor = 'green';
-         cellTwo.style.backgroundColor = 'green';
-            cellThree.style.backgroundColor = 'green';
+       playerOne.textContent = playerOneScore += 1;
+       cellOne.style.backgroundColor = 'pink';
+         cellTwo.style.backgroundColor = 'pink';
+            cellThree.style.backgroundColor = 'pink';
+            gameBoard.length = 0
+            setTimeout(reset, 1000);
    } else if (cellOne.textContent === 'O' && cellTwo.textContent === 'O' && cellThree.textContent === 'O') {
-       alert('Player Two Wins!');
-       cellOne.style.backgroundColor = 'green';
-         cellTwo.style.backgroundColor = 'green';
-            cellThree.style.backgroundColor = 'green';
+    playerTwo.textContent = playerTwoScore += 1;
+    cellOne.style.backgroundColor = 'purple';
+         cellTwo.style.backgroundColor = 'purple';
+            cellThree.style.backgroundColor = 'purple';
+            gameBoard.length = 0
+            setTimeout(reset, 1000);
+
    }
     else if (cellFour.textContent === 'X' && cellFive.textContent === 'X' && cellSix.textContent === 'X') {
-         alert('Player One Wins!');
-         cellFour.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellSix.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1; 
+        cellFour.style.backgroundColor = 'pink';
+            cellFive.style.backgroundColor = 'pink';
+                cellSix.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellFour.textContent === 'O' && cellFive.textContent === 'O' && cellSix.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellFour.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellSix.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellFour.style.backgroundColor = 'purple';
+            cellFive.style.backgroundColor = 'purple';
+                cellSix.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellSeven.textContent === 'X' && cellEight.textContent === 'X' && cellNine.textContent === 'X') {
-        alert('Player One Wins!');
-        cellSeven.style.backgroundColor = 'green';
-            cellEight.style.backgroundColor = 'green';
-                cellNine.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1;
+        cellSeven.style.backgroundColor = 'pink';
+            cellEight.style.backgroundColor = 'pink';
+                cellNine.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellSeven.textContent === 'O' && cellEight.textContent === 'O' && cellNine.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellSeven.style.backgroundColor = 'green';
-            cellEight.style.backgroundColor = 'green';
-                cellNine.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellSeven.style.backgroundColor = 'purple';
+            cellEight.style.backgroundColor = 'purple';
+                cellNine.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellOne.textContent === 'X' && cellFour.textContent === 'X' && cellSeven.textContent === 'X') {
-        alert('Player One Wins!');
-        cellOne.style.backgroundColor = 'green';
-            cellFour.style.backgroundColor = 'green';
-                cellSeven.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1;
+        cellOne.style.backgroundColor = 'pink';
+            cellFour.style.backgroundColor = 'pink';
+                cellSeven.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellOne.textContent === 'O' && cellFour.textContent === 'O' && cellSeven.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellOne.style.backgroundColor = 'green';
-            cellFour.style.backgroundColor = 'green';
-                cellSeven.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellOne.style.backgroundColor = 'purple';
+            cellFour.style.backgroundColor = 'purple';
+                cellSeven.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellTwo.textContent === 'X' && cellFive.textContent === 'X' && cellEight.textContent === 'X') {
-        alert('Player One Wins!');
-        cellTwo.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellEight.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1;
+        cellTwo.style.backgroundColor = 'pink';
+            cellFive.style.backgroundColor = 'pink';
+                cellEight.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellTwo.textContent === 'O' && cellFive.textContent === 'O' && cellEight.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellTwo.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellEight.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellTwo.style.backgroundColor = 'purple';
+            cellFive.style.backgroundColor = 'purple';
+                cellEight.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellThree.textContent === 'X' && cellSix.textContent === 'X' && cellNine.textContent === 'X') {
-        alert('Player One Wins!');
-        cellThree.style.backgroundColor = 'green';
-            cellSix.style.backgroundColor = 'green';
-                cellNine.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1;
+        cellThree.style.backgroundColor = 'pink';
+            cellSix.style.backgroundColor = 'pink';
+                cellNine.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellThree.textContent === 'O' && cellSix.textContent === 'O' && cellNine.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellThree.style.backgroundColor = 'green';
-            cellSix.style.backgroundColor = 'green';
-                cellNine.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellThree.style.backgroundColor = 'purple';
+            cellSix.style.backgroundColor = 'purple';
+                cellNine.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellOne.textContent === 'X' && cellFive.textContent === 'X' && cellNine.textContent === 'X') {
-        alert('Player One Wins!');
-        cellOne.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellNine.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1;
+        cellOne.style.backgroundColor = 'pink';
+            cellFive.style.backgroundColor = 'pink';
+                cellNine.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellOne.textContent === 'O' && cellFive.textContent === 'O' && cellNine.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellOne.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellNine.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellOne.style.backgroundColor = 'purple';
+            cellFive.style.backgroundColor = 'purple';
+                cellNine.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }   
     else if (cellThree.textContent === 'X' && cellFive.textContent === 'X' && cellSeven.textContent === 'X') {
-        alert('Player One Wins!');
-        cellThree.style.backgroundColor = 'green';
-            cellFive.style.backgroundColor = 'green';
-                cellSeven.style.backgroundColor = 'green';
+        playerOne.textContent = playerOneScore += 1;
+        cellThree.style.backgroundColor = 'pink';
+            cellFive.style.backgroundColor = 'pink';
+                cellSeven.style.backgroundColor = 'pink';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (cellThree.textContent === 'O' && cellFive.textContent === 'O' && cellSeven.textContent === 'O') {
-        alert('Player Two Wins!');
-        cellThree.style.backgroundColor = 'green'; 
-            cellFive.style.backgroundColor = 'green';
-                cellSeven.style.backgroundColor = 'green';
+        playerTwo.textContent = playerTwoScore += 1;
+        cellThree.style.backgroundColor = 'purple'; 
+            cellFive.style.backgroundColor = 'purple';
+                cellSeven.style.backgroundColor = 'purple';
+                gameBoard.length = 0
+                setTimeout(reset, 1000);
+
     }
     else if (gameBoard.length === 0) {
         alert("No winner!")
+        gameBoard.length = 0
+        setTimeout(reset, 1000);
+
     }
+
+}
+
+function reset() {
+    gameBoard.push('X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X')
+    cellOne.textContent = '';
+    cellTwo.textContent = '';
+    cellThree.textContent = '';
+    cellFour.textContent = '';
+    cellFive.textContent = '';
+    cellSix.textContent = '';
+    cellSeven.textContent = '';
+    cellEight.textContent = '';
+    cellNine.textContent = '';
+    cellOne.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellTwo.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellThree.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellFour.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellFive.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellSix.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellSeven.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellEight.style.backgroundColor = 'rgb(106, 106, 179)';
+    cellNine.style.backgroundColor = 'rgb(106, 106, 179)';
+
+    cellOne.removeAttribute('id' , 'selected');
+    cellTwo.removeAttribute('id' , 'selected');
+    cellThree.removeAttribute('id' , 'selected');
+    cellFour.removeAttribute('id' , 'selected');
+    cellFive.removeAttribute('id' , 'selected');
+    cellSix.removeAttribute('id' , 'selected');
+    cellSeven.removeAttribute('id' , 'selected');
+    cellEight.removeAttribute('id' , 'selected');
+    cellNine.removeAttribute('id' , 'selected');
 
 }
