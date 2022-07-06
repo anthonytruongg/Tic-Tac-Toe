@@ -8,7 +8,6 @@ body {
 }
 #selected {
     pointer-events: none;
-    background-color: red;
 }
 .header {
     /* grid-column: 2 / 3; */
@@ -33,32 +32,32 @@ body {
 } */
 
 .mainGrid {
-    /* grid-column: 2 / 3;
-    grid-row: 2 / 3; */
-    background-color: red;
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 2fr 2fr;
+    border-radius: 15px;
+    gap: 10px;
 }
+
 
 .cellOne, .cellTwo, .cellThree, .cellFour, .cellFive
 , .cellSix, .cellSeven, .cellEight, .cellNine {
     background-color: rgb(106, 106, 179);
-    border: 1px solid black;
     transition: 0.3s;
     display: grid;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 
     color: white;
 }
 
-.cellOne:hover, .cellTwo:hover, .cellThree:hover, .cellFour:hover, .cellFive:hover
+/* .cellOne:hover, .cellTwo:hover, .cellThree:hover, .cellFour:hover, .cellFive:hover
 , .cellSix:hover, .cellSeven:hover, .cellEight:hover, .cellNine:hover {
     background-color: rgb(244, 244, 244);
     border: 1px solid black;
-}
+} */
+
 .playerOne {
     background-color: pink;
     color: white;
@@ -73,7 +72,13 @@ body {
     margin: 10px;
     padding: 10px;
 }
+input {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(200, 146, 146);
+    border: none;
 
+}
 .footer {
     text-align: center;
     color: white;

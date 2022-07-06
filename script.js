@@ -31,13 +31,7 @@ cellEight.addEventListener('click', selectEight);
 const cellNine = document.querySelector('.cellNine');
 cellNine.addEventListener('click', selectNine);
 // --------------------------------------------------
-// Player Objects
-// let playerOne = {
-//     name: 'Player One',
-//     score: document.querySelector('playerOneScore').textContent,
-//     symbol: 'X',
-    
-// }
+
 var playerOneScore = 0;
 var playerTwoScore = 0;
 // --------------------------------------------------
@@ -61,12 +55,10 @@ function selectTwo() {
     cellTwo.style.fontSize = "50px";
     cellTwo.textContent = 'X';
     cellTwo.setAttribute('id', 'selected');
-    // cellTwo.style.pointerEvents = 'none';
     }
     else if (gameBoard[0] === 'O') {
     cellTwo.style.fontSize = "50px";
     cellTwo.textContent = 'O';
-    // cellTwo.style.pointerEvents = 'none';
     cellTwo.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -76,14 +68,12 @@ function selectThree() {
     if (gameBoard[0] === 'X') {
     cellThree.style.fontSize = "50px";
     cellThree.textContent = 'X';
-    // cellThree.style.pointerEvents = 'none';
     cellThree.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellThree.style.fontSize = "50px";
     cellThree.textContent = 'O';
-    // cellThree.style.pointerEvents = 'none';
     cellThree.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -93,14 +83,12 @@ function selectFour() {
     if (gameBoard[0] === 'X') {
     cellFour.style.fontSize = "50px";
     cellFour.textContent = 'X';
-    // cellFour.style.pointerEvents = 'none';
     cellFour.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellFour.style.fontSize = "50px";
     cellFour.textContent = 'O';
-    // cellFour.style.pointerEvents = 'none';
     cellFour.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -110,14 +98,12 @@ function selectFive() {
     if (gameBoard[0] === 'X') {
     cellFive.style.fontSize = "50px";
     cellFive.textContent = 'X';
-    // cellFive.style.pointerEvents = 'none';
     cellFive.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellFive.style.fontSize = "50px";
     cellFive.textContent = 'O';
-    // cellFive.style.pointerEvents = 'none';
     cellFive.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -127,14 +113,12 @@ function selectSix() {
     if (gameBoard[0] === 'X') {
     cellSix.style.fontSize = "50px";
     cellSix.textContent = 'X';
-    // cellSix.style.pointerEvents = 'none';
     cellSix.setAttribute('id', 'selected');
 
     }
     else if (gameBoard[0] === 'O') {
     cellSix.style.fontSize = "50px";
     cellSix.textContent = 'O';
-    // cellSix.style.pointerEvents = 'none';
     cellSix.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -144,13 +128,11 @@ function selectSeven() {
     if (gameBoard[0] === 'X') {
     cellSeven.style.fontSize = "50px";
     cellSeven.textContent = 'X';
-    // cellSeven.style.pointerEvents = 'none';
     cellSeven.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellSeven.style.fontSize = "50px";
     cellSeven.textContent = 'O';
-    // cellSeven.style.pointerEvents = 'none';
     cellSeven.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -160,13 +142,11 @@ function selectEight() {
     if (gameBoard[0] === 'X') {
     cellEight.style.fontSize = "50px";
     cellEight.textContent = 'X';
-    // cellEight.style.pointerEvents = 'none';
     cellEight.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellEight.style.fontSize = "50px";
     cellEight.textContent = 'O';
-    // cellEight.style.pointerEvents = 'none';
     cellEight.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -176,13 +156,11 @@ function selectNine() {
     if (gameBoard[0] === 'X') {
     cellNine.style.fontSize = "50px";
     cellNine.textContent = 'X';
-    // cellNine.style.pointerEvents = 'none';
     cellNine.setAttribute('id', 'selected');
     }
     else if (gameBoard[0] === 'O') {
     cellNine.style.fontSize = "50px";
     cellNine.textContent = 'O';
-    // cellNine.style.pointerEvents = 'none';
     cellNine.setAttribute('id', 'selected');
     }
     gameBoard.shift()
@@ -355,6 +333,7 @@ function reset() {
     cellSeven.textContent = '';
     cellEight.textContent = '';
     cellNine.textContent = '';
+
     cellOne.style.backgroundColor = 'rgb(106, 106, 179)';
     cellTwo.style.backgroundColor = 'rgb(106, 106, 179)';
     cellThree.style.backgroundColor = 'rgb(106, 106, 179)';
@@ -376,3 +355,4 @@ function reset() {
     cellNine.removeAttribute('id' , 'selected');
 
 }
+
